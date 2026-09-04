@@ -1,0 +1,411 @@
+/* ============================================================
+   CampusSplit — shared stylesheet
+   ============================================================ */
+
+:root {
+    --accent: #3b6fed;
+    --accent-dark: #2c56c9;
+    --bg: #f4f6fb;
+    --card-bg: #ffffff;
+    --border: #e2e5ec;
+    --text: #1a1d29;
+    --muted: #6b7280;
+    --owe: #d64545;
+    --owed: #1f9d55;
+    --radius: 12px;
+    --shadow: 0 2px 10px rgba(20, 20, 40, 0.06);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+/* ---------- Navbar ---------- */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--accent);
+}
+
+.navbar nav {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: var(--accent);
+}
+
+/* ---------- Layout ---------- */
+
+.container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 20px 60px;
+}
+
+.page-heading h1 {
+    margin-bottom: 4px;
+}
+
+.page-heading p {
+    color: var(--muted);
+    margin-top: 0;
+}
+
+footer {
+    text-align: center;
+    color: var(--muted);
+    padding: 24px;
+    font-size: 0.9rem;
+}
+
+/* ---------- Cards / forms ---------- */
+
+.form-card,
+.settlement-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 28px;
+    margin-bottom: 24px;
+}
+
+.form-card h2,
+.settlement-card h2 {
+    margin-top: 0;
+}
+
+form { display: flex; flex-direction: column; }
+
+label {
+    font-weight: 600;
+    margin: 16px 0 6px;
+}
+
+label:first-of-type { margin-top: 0; }
+
+input[type="text"],
+input[type="number"],
+select {
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: var(--card-bg);
+    color: var(--text);
+    width: 100%;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox-group label {
+    font-weight: 400;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hint {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: -2px;
+    margin-bottom: 8px;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.btn:hover { background: var(--accent-dark); }
+
+.secondary-btn {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-small {
+    background: var(--bg);
+    color: var(--accent);
+    border: 1px dashed var(--accent);
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 8px;
+    align-self: flex-start;
+}
+
+.btn-remove {
+    background: transparent;
+    border: none;
+    color: var(--owe);
+    font-size: 1.2rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 6px;
+}
+
+.btn-remove-group {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid var(--owe);
+    color: var(--owe);
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-remove-group:hover:not(:disabled) {
+    background: var(--owe);
+    color: #fff;
+}
+
+.btn-remove-group:disabled {
+    border-color: var(--border);
+    color: var(--muted);
+    cursor: not-allowed;
+}
+
+/* ---------- Dashboard hero + summary ---------- */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 28px;
+    margin-bottom: 24px;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.hero h1 { margin: 0 0 6px; }
+.hero p { margin: 0; color: var(--muted); }
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 20px;
+}
+
+.card h3 {
+    margin: 0 0 8px;
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.amount { font-size: 1.6rem; font-weight: 700; margin: 0; }
+.amount.owe { color: var(--owe); }
+.amount.owed { color: var(--owed); }
+
+/* ---------- Sections / groups ---------- */
+
+.section { margin-bottom: 36px; }
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.section-header h2 { margin: 0; }
+
+.groups-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.group-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 20px;
+}
+
+.group-card h2, .group-card h3 { margin: 0 0 6px; }
+.group-card p { margin: 2px 0; color: var(--muted); }
+.group-money { font-weight: 600; color: var(--text) !important; }
+
+.empty-state {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 32px;
+    text-align: center;
+    color: var(--muted);
+}
+
+.empty-state h3 { color: var(--text); }
+
+/* ---------- Settlement page ---------- */
+
+.settlement-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+}
+
+.settlement-item:last-of-type { border-bottom: none; }
+
+.settlement-item strong { display: block; }
+.settlement-item p { margin: 2px 0 0; color: var(--muted); font-size: 0.9rem; }
+
+.owe { color: var(--owe); font-weight: 700; }
+.owed { color: var(--owed); font-weight: 700; }
+
+.mark-paid-btn {
+    margin-top: 0;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+}
+
+.mark-paid-btn:disabled {
+    background: var(--owed);
+    cursor: default;
+    opacity: 0.8;
+}
+
+/* ---------- Smart / Gemini input ---------- */
+
+.smart-input-box {
+    background: #eef3ff;
+    border: 1px dashed var(--accent);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.smart-input-box label {
+    margin-top: 0;
+}
+
+.smart-input-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.smart-input-row input {
+    flex: 1;
+    min-width: 220px;
+}
+
+.smart-input-row button {
+    margin-top: 0;
+    white-space: nowrap;
+}
+
+#smart-input-status {
+    margin: 10px 0 0;
+    font-size: 0.88rem;
+    color: var(--muted);
+}
+
+/* ---------- Split type / unequal rows ---------- */
+
+.split-warning {
+    color: var(--owe);
+    font-weight: 600;
+    margin-top: 10px;
+    display: none;
+}
+
+.unequal-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.unequal-row label {
+    margin: 0;
+    font-weight: 400;
+    flex: 1;
+}
+
+.unequal-row input { width: 140px; }
+
+/* ---------- Group member inputs ---------- */
+
+.member-input-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.member-input-row input { flex: 1; }

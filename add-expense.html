@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusSplit - Add Expense</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">CampusSplit</div>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="group.html">Groups</a>
+            <a href="settlement.html">Settlements</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="page-heading">
+            <h1>Add Expense</h1>
+            <p>Add a shared expense and split it with your group.</p>
+        </section>
+
+        <section class="smart-input-box">
+            <label for="smart-input">✨ Or just describe it (powered by Gemini)</label>
+            <div class="smart-input-row">
+                <input
+                    type="text"
+                    id="smart-input"
+                    placeholder='e.g. "Disha paid 1200 for dinner split between all 4"'
+                >
+                <button type="button" class="btn" id="smart-input-btn">Auto-fill</button>
+            </div>
+            <p id="smart-input-status"></p>
+        </section>
+
+        <section class="form-card">
+
+            <form id="expense-form">
+
+                <label for="description">Expense Description</label>
+                <input type="text" id="description" placeholder="e.g. Dinner, Movie, Groceries">
+
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" placeholder="₹ Enter amount">
+
+                <label for="category">Category</label>
+                <select id="category">
+                    <option value="food">🍕 Food</option>
+                    <option value="travel">🚕 Travel</option>
+                    <option value="stay">🏨 Stay</option>
+                    <option value="entertainment">🎬 Entertainment</option>
+                    <option value="shopping">🛒 Shopping</option>
+                    <option value="education">📚 Education</option>
+                    <option value="bills">💡 Bills</option>
+                    <option value="other">📦 Other</option>
+                </select>
+
+                <label for="group">Select Group</label>
+                <select id="group">
+                    <option value="">Select a group</option>
+                    <!-- Real groups are loaded here by expense.js -->
+                </select>
+
+                <label for="paidBy">Paid By</label>
+                <select id="paidBy">
+                    <option value="">Select a group first</option>
+                </select>
+
+                <label>Split Between</label>
+                <div class="checkbox-group" id="split-between-group">
+                    <p class="hint">Select a group first</p>
+                </div>
+
+                <label>Split Type</label>
+                <div class="checkbox-group">
+                    <label><input type="radio" name="splitType" value="equal" checked> Equal</label>
+                    <label><input type="radio" name="splitType" value="unequal"> Unequal</label>
+                </div>
+
+                <div id="unequal-inputs"></div>
+                <p id="split-warning" class="split-warning"></p>
+
+                <button type="submit" class="btn">Add Expense</button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 CampusSplit</p>
+    </footer>
+
+    <script src="js/storage.js"></script>
+    <script src="js/settlement.js"></script>
+    <script src="js/gemini.js"></script>
+    <script src="js/expense.js"></script>
+    <script src="js/voice.js"></script>
+</body>
+</html>

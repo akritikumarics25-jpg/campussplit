@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusSplit - Settlements</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">CampusSplit</div>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="group.html">Groups</a>
+            <a href="settlement.html" class="active">Settlements</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="page-heading">
+            <h1>Settlements</h1>
+            <p>See who needs to pay whom — per group, so unrelated people never get matched together.</p>
+        </section>
+
+        <div id="group-settlements">
+            <!-- One settlement block per group, rendered by settlements.js -->
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 CampusSplit</p>
+    </footer>
+
+    <script src="js/storage.js"></script>
+    <script src="js/settlement.js"></script>
+    <script src="js/settlements.js"></script>
+</body>
+</html>

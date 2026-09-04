@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusSplit - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">CampusSplit</div>
+        <nav>
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="group.html">Groups</a>
+            <a href="settlement.html">Settlements</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <div>
+                <h1>Manage shared expenses easily.</h1>
+                <p>Split expenses with your friends, track spending and settle payments.</p>
+            </div>
+            <a href="add-expense.html" class="btn">+ Add Expense</a>
+        </section>
+
+        <section class="summary-grid">
+            <div class="card">
+                <h3>Total Expenses</h3>
+                <p class="amount" id="total-expenses">₹0</p>
+            </div>
+            <div class="card">
+                <h3>You Owe</h3>
+                <p class="amount owe" id="you-owe">₹0</p>
+            </div>
+            <div class="card">
+                <h3>You Are Owed</h3>
+                <p class="amount owed" id="you-are-owed">₹0</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2>Your Groups</h2>
+                <a href="group.html" class="secondary-btn">View Groups</a>
+            </div>
+            <div class="groups-grid" id="groups-grid">
+                
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2>Recent Expenses</h2>
+            </div>
+            <div id="recent-expenses">
+                <!-- Recent expenses or an empty state are rendered here -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 CampusSplit</p>
+    </footer>
+
+    <script src="js/storage.js"></script>
+    <script src="js/settlement.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusSplit - Groups</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">CampusSplit</div>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="group.html" class="active">Groups</a>
+            <a href="settlement.html">Settlements</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="page-heading">
+            <h1>Your Groups</h1>
+            <p>Manage expenses shared with your friends.</p>
+        </section>
+
+        <section class="groups-grid" id="groups-grid">
+            <!-- Group cards are rendered here by groups.js -->
+        </section>
+
+        <section class="form-card">
+            <h2>Create a New Group</h2>
+
+            <form id="create-group-form">
+
+                <label for="new-group-name">Group Name</label>
+                <input type="text" id="new-group-name" placeholder="e.g. Goa Trip" required>
+
+                <label for="new-group-type">Group Type</label>
+                <select id="new-group-type">
+                    <option value="trip">Trip</option>
+                    <option value="pg">PG</option>
+                    <option value="roommates">Roommates</option>
+                    <option value="event">Event</option>
+                    <option value="project">College Project</option>
+                </select>
+
+                <label>Members</label>
+                <p class="hint">"You" is added automatically — add everyone else.</p>
+
+                <div id="member-inputs">
+                    <div class="member-input-row">
+                        <input type="text" class="member-name-input" placeholder="Member name">
+                    </div>
+                </div>
+
+                <button type="button" class="btn-small" id="add-member-btn">+ Add Member</button>
+
+                <button type="submit" class="btn">Create Group</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 CampusSplit</p>
+    </footer>
+
+    <script src="js/storage.js"></script>
+    <script src="js/settlement.js"></script>
+    <script src="js/groups.js"></script>
+</body>
+</html>

@@ -1,17 +1,11 @@
 /* ============================================================
    gemini.js
   
-   ============================================================
-   >>> INSERT API KEY HERE <<<
-   Get a free key from https://aistudio.google.com/apikey
-   and paste it below. Fine for a hackathon demo; swap to a
-   backend proxy before shipping anything real, since this key
-   is visible in the browser's page source.
+   
+  
    ============================================================ */
 
-// Reads the key from config.js if that file exists (window.GEMINI_API_KEY),
-// and safely falls back to an empty string if config.js is missing entirely —
-// e.g. on GitHub Pages, where config.js is gitignored and never gets deployed.
+
 const GEMINI_API_KEY = window.GEMINI_API_KEY || "";
 const GEMINI_MODEL = "gemini-2.0-flash";
 const GEMINI_URL =

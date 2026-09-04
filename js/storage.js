@@ -9,7 +9,7 @@ const STORAGE_KEY = "campussplit_data";
 const DEFAULT_DATA = {
     groups: [
         {
-            id: "goa-trip",
+            id: "Trip",
             name: "Goa Trip",
             type: "trip",
             members: ["You", "Isha", "Rahul", "Neha"]
@@ -18,7 +18,7 @@ const DEFAULT_DATA = {
             id: "pg-expenses",
             name: "PG Expenses",
             type: "pg",
-            members: ["You", "Aman", "Kabir"]
+            members: ["You", "Neha", "Isha"]
         }
     ],
     expenses: [],

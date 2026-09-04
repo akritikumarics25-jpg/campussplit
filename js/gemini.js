@@ -3,7 +3,7 @@
    
    ============================================================ */
 
-const GEMINI_API_KEY = ""; // <-- paste your Gemini API key here
+
 const GEMINI_MODEL = "gemini-2.0-flash";
 const GEMINI_URL =
     `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;

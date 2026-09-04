@@ -28,7 +28,7 @@ function renderAllGroupSettlements() {
 
         const toggleBtn = container.querySelector(`.toggle-detailed-btn[data-group="${group.id}"]`);
         if (toggleBtn) toggleBtn.addEventListener("click", () => toggleDetailedBreakdown(group.id));
-    });
+    })
 }
 
 function renderGroupBlock(group, data) {

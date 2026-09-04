@@ -45,28 +45,3 @@ campussplit/
     └── settlements.js
 ```
 
-## Running Locally
-
-1. Clone the repo:
-   ```
-   git clone https://github.com/akritikumarics25-jpg/campussplit.git
-   ```
-2. Open `index.html` in a browser, or serve the folder with any static
-   server (e.g. VS Code's Live Server extension).
-
-## Enabling the Gemini AI Feature (optional)
-
-The app works fully without this — it falls back to a simple local parser.
-To use the real Gemini API instead:
-
-1. Get a free API key from [Google AI Studio](https://aistudio.google.com/apikey).
-2. Create a file `js/config.js` (this file is gitignored and never committed):
-   ```javascript
-   window.GEMINI_API_KEY = "your-key-here";
-   ```
-3. Add it to `add-expense.html`, right before the `gemini.js` script tag:
-   ```html
-   <script src="js/config.js"></script>
-   <script src="js/gemini.js"></script>
-   ```
-
